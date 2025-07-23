@@ -91,11 +91,17 @@ cp .env.example .env
 npm run dev
 ```
 
-5. Build and start for production:
+5. Build and start for production with docker:
 
 ```bash
-npm run build
-npm start
+# Build and start the production service
+docker-compose up -d
+
+# View logs
+docker-compose logs -f address-validator-api
+
+# Stop the service
+docker-compose down
 ```
 
 ---
