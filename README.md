@@ -12,7 +12,15 @@ An Express + TypeScript-based API for validating and standardizing US property a
 * **Hybrid parsing engine**: fast Regex for simple addresses, fallback to Groq AI for complex cases
 * Returns status: valid, corrected, or fail
 * Swagger documentation
+---
+## 🧩 Parsing Approach
+This project uses a hybrid parsing strategy to handle a wide variety of address formats:
 
+* Regex-Based Extraction: First, it attempts to parse the address using custom-crafted regular expressions for speed and accuracy on well-formatted inputs.
+
+* Grok AI Fallback: If regex parsing fails or results are incomplete, the system falls back to Grok AI to interpret and structure the address, especially useful for handling messy inputs, abbreviations, or uncommon patterns.
+
+This layered approach increases resilience and ensures more accurate results across diverse real-world address inputs.
 ---
 
 ## 🧠 AI Usage
